@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>module</type>
+		<description>Language labels for extension 'ch_treeview'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="pi1_title">Example for a treeview</label>
+			<label index="pi1_plus_wiz_description">Example for a treeview</label>
+		</languageKey>
+	</data>
+</T3locallang>

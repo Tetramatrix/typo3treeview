@@ -1,0 +1,39 @@
+--- class.t3lib_tceforms.php	2009-06-04 13:20:20.000000000 +0200
++++ class.t3lib_tceforms.php.bak	2009-06-03 19:15:47.000000000 +0200
+@@ -2262,8 +2262,7 @@
+ 	 * @return	string		The HTML code for the TCEform field
+ 	 */
+ 	function getSingleField_typeFlex($table,$field,$row,&$PA)	{
+-		global $BE_USER;
+-		
++
+ 			// Data Structure:
+ 		$dataStructArray = t3lib_BEfunc::getFlexFormDS($PA['fieldConf']['config'],$row,$table);
+ 
+@@ -2318,7 +2317,7 @@
+ 
+ 			$PA['_noEditDEF'] = FALSE;
+ 			if ($langChildren || $langDisabled)	{
+-				$rotateLang = array(strtoupper($BE_USER->uc['lang']));
++				$rotateLang = array('DEF');
+ 			} else {
+ 				if (!in_array('DEF',$editData['meta']['currentLangId']))	{
+ 					array_unshift($editData['meta']['currentLangId'],'DEF');
+@@ -2335,7 +2334,7 @@
+ 			}
+ 
+ 			foreach ($rotateLang as $lKey)	{
+-				if ($langChildren && $langDisabled)	{
++				if (!$langChildren && !$langDisabled)	{
+ 					$item.= '<b>'.$this->getLanguageIcon($table,$row,'v'.$lKey).$lKey.':</b>';
+ 				}
+ 
+@@ -2346,7 +2345,7 @@
+ 						// Render sheet:
+ 					if (is_array($dataStruct['ROOT']) && is_array($dataStruct['ROOT']['el']))		{
+ 						$lang = 'l'.$lKey;	// Default language, other options are "lUK" or whatever country code (independant of system!!!)
+-						$PA['_valLang'] = $langChildren && !$langDisabled ? $editData['meta']['currentLangId'] : array(strtoupper($BE_USER->uc['lang']));	// Default language, other options are "lUK" or whatever country code (independant of system!!!)
++						$PA['_valLang'] = $langChildren && !$langDisabled ? $editData['meta']['currentLangId'] : 'DEF';	// Default language, other options are "lUK" or whatever country code (independant of system!!!)
+ 						$PA['_lang'] = $lang;
+ 						$PA['_cshFile'] = ((isset($dataStruct['ROOT']['TCEforms']) && isset($dataStruct['ROOT']['TCEforms']['cshFile'])) ? $dataStruct['ROOT']['TCEforms']['cshFile'] : '');
+ 

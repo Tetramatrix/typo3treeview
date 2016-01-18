@@ -1,0 +1,36 @@
+<T3DataStructure>
+  	<sheets>
+		<sDEF>
+			<ROOT>	
+				<TCEforms>
+					<sheetTitle>LLL:EXT:ch_treeview/locallang_db.xml:tt_content.pi_flexform.sheet_general</sheetTitle>
+				</TCEforms>
+				<type>array</type>
+				<el>
+					                    
+					<exampleTree>
+						<TCEforms>
+							<label>LLL:EXT:ch_treeview/locallang_db.xml:ch_treeview.pi_flexform.exampleTree</label>
+							<config>
+								<type>select</type>
+								<form_type>user</form_type>
+								<treeView>1</treeView>
+								<treeName>txchtreeviewexample</treeName>
+								<userFunc>tx_ch_treeview->displayCategoryTree</userFunc>
+								<foreign_table>tx_chtreeview_example</foreign_table>
+								<size>10</size>
+								<autoSizeMax>20</autoSizeMax>
+								<minitems>0</minitems>
+								<maxitems>20</maxitems>
+							</config>
+						</TCEforms>
+					</exampleTree>                   
+					
+				</el>
+			</ROOT>
+		</sDEF>  
+		
+		
+
+	</sheets>
+</T3DataStructure>

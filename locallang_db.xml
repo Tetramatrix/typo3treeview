@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes" ?>
+<T3locallang>
+	<meta type="array">
+		<type>database</type>
+		<description>Language labels for database tables/fields belonging to extension 'ch_treeview'</description>
+	</meta>
+	<data type="array">
+		<languageKey index="default" type="array">
+			<label index="tx_chtreeview_example">Example Tree</label>
+			<label index="ch_treeview.pi_flexform.exampleTree">Example Tree</label>
+			<label index="tx_chtreeview_example.title">Title</label>
+			<label index="tx_chtreeview_example.parent_uid">Parent Uid</label>
+			<label index="tt_content.list_type_pi1">Example for a treeview</label>
+            <label index="tt_content.pi_flexform.sheet_general">General</label>
+            <label index="tx_chtreeview_example.createNewParentCategory">Create New Parent Category</label>
+            <label index="tx_treeview_example.listCategories">List Categories</label>
+		</languageKey>
+	</data>
+</T3locallang>
